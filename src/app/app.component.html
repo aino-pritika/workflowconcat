@@ -1,0 +1,25 @@
+
+
+ <div>
+   <h2 color="primary">Add User</h2>
+     <form [formGroup]="addCusForm">
+
+        <input  placeholder="First Name" formControlName="firstname" required><br>
+        <ng-container *ngIf="addCusForm.controls.firstname.hasError('required')">
+          Please enter first name
+        </ng-container>
+
+<br>
+        <input placeholder="Last Name" formControlName="lastname" required><br>
+
+        <ng-container *ngIf="addCusForm.controls.lastname.hasError('required')">
+              Please enter last name
+     </ng-container> 
+<br>
+
+    <button mat-flat-button type="submit" (click)="onaddUser()">Save</button>
+
+  </form>
+
+  Full Name : {{fullname }}
+</div>
