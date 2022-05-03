@@ -1,9 +1,6 @@
 
-//   // var firstname = $("#txt1").val();
-//   // var lastname = $("#txt1").val();
-
-
-
+var Text1=document.getElementsByName("Text1").value;
+var Text2=document.getElementsByName("Text2").value;
 var wfs={
     "action":
     {
@@ -12,15 +9,11 @@ var wfs={
     }    ,
    
     "todo":{
-      "bt.text":"firstname.text+lastname.text"
+      "bt.value":"Text1.value+Text2.value"
     
 }
 }
-
-
-// console.log(firstname+lastname);
-// console.log(wfs.todo["bt1.txt"]);
-  
-  
-//console.log(wfs.todo["bt1.txt"]);
-//console.log(str1);
+console.log(Text1);
+console.log(Text2);
+let string=Text1+Text2;
+console.log(eval(string));
