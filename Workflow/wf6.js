@@ -1,6 +1,7 @@
 
-var Text1=document.getElementsByName("Text1").value;
-var Text2=document.getElementsByName("Text2").value;
+
+ function myFunc(a,b)
+{
 var wfs={
     "action":
     {
@@ -9,11 +10,26 @@ var wfs={
     }    ,
    
     "todo":{
-      "bt.value":"Text1.value+Text2.value"
+      "bt.val":"a+b"
     
 }
+
 }
-console.log(Text1);
-console.log(Text2);
-let string=Text1+Text2;
+let string=wfs.todo["bt.val"];
 console.log(eval(string));
+display(wfs);
+
+}
+
+function add()
+{
+ a = $('#Text1').val();
+ b = $('#Text2').val();
+myFunc(a,b);
+console.log(a);
+console.log(b);
+}
+
+
+
+
