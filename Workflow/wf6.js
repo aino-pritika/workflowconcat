@@ -1,35 +1,15 @@
 
 
- function myFunc(a,b)
-{
-var wfs={
-    "action":
-    {
-        "name":"updatelabel",
-        "on":".btn-action"
-    }    ,
+
+var wfPageRules = {
+    'click' : {
+        'id#bt' : {
+            'var#temp' : { 'expr#init' : "text1.value + text2.value "},
+            'set#l1.value' : "var#temp"
+       }
+    },
+    'ondblclick' :{
+        'set#l1.value':"var#temp"
+    }
+    };
    
-    "todo":{
-      "bt.val":"a+b"
-    
-}
-
-}
-let string=wfs.todo["bt.val"];
-console.log(eval(string));
-display(wfs);
-
-}
-
-function add()
-{
- a = $('#Text1').val();
- b = $('#Text2').val();
-myFunc(a,b);
-console.log(a);
-console.log(b);
-}
-
-
-
-
